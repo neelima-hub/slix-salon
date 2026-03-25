@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF6F1;
+  --color-cream-dark: #F0E8DD;
+  --color-gold: #C9A96E;
+  --color-gold-light: #D4BA85;
+  --color-gold-dark: #A8853F;
+  --color-charcoal: #2A2A2A;
+  --color-charcoal-light: #3D3D3D;
+  --color-espresso: #1A1A1A;
+  --color-rose: #C4898A;
+  --color-rose-light: #D4A5A6;
+  --color-sage: #8B9D83;
+  --color-taupe: #B8A99A;
+  --color-warm-white: #FEFCF9;
+  --font-display: 'Playfair Display', serif;
+  --font-elegant: 'Cormorant Garamond', serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-warm-white);
+  color: var(--color-charcoal);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(26,26,26,0.85) 0%, rgba(42,42,42,0.7) 50%, rgba(201,169,110,0.3) 100%);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold) 50%, var(--color-gold-light) 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold) 50%, var(--color-gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.service-card:hover .service-overlay {
+  opacity: 1;
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+}
+
+.floating-whatsapp {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 0 20px 10px rgba(37, 211, 102, 0.2); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.pattern-bg {
+  background-image: radial-gradient(circle at 1px 1px, var(--color-gold) 0.5px, transparent 0);
+  background-size: 40px 40px;
+  opacity: 0.08;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
